@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  scan_ruby:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: apps/api/.ruby-version
+          bundler-cache: true
+          working-directory: apps/api
+        env:
+          BUNDLE_FROZEN: "true"
+
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        working-directory: apps/api
+        run: bin/brakeman --no-pager
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: apps/api/.ruby-version
+          bundler-cache: true
+          working-directory: apps/api
+        env:
+          BUNDLE_FROZEN: "true"
+
+      - name: Lint code for consistent style
+        working-directory: apps/api
+        run: bin/rubocop -f github

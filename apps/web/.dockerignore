@@ -1,0 +1,15 @@
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile*
+
+# Node
+node_modules
+.next
+
+# Env
+.env
+.env*.local

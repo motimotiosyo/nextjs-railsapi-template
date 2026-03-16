@@ -1,0 +1,29 @@
+# Git
+.git/
+.gitignore
+.github/
+
+# Docker
+.dockerignore
+Dockerfile*
+
+# Bundler
+.bundle
+/.env*
+!/.env*.erb
+
+# Credentials
+/config/master.key
+/config/credentials/*.key
+
+# Logs / Tmp
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/.keep
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/.keep
