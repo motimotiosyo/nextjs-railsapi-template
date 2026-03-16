@@ -62,13 +62,13 @@ volumes:
 docker compose -f compose.yml -f compose.dev.yml up
 ```
 
-### 3. 動作確認
+### 4. 動作確認
 
 - Web: http://localhost:3000
 - API疎通確認: `GET http://localhost:3001/api/v1/health`
   - レスポンス: `{"status":"ok","message":"APIが正常に動作しています"}`
 
-### 4. 停止
+### 5. 停止
 
 ```bash
 docker compose down
