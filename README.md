@@ -28,8 +28,8 @@
 
 ### 1. リポジトリを作成してクローン
 
-1. このリポジトリ右上の「Use this template」→「Create a new repository」
-2. 作成された自分のリポジトリをクローン
+> **このリポジトリを直接クローンしないでください。**
+> 右上の **「Use this template」→「Create a new repository」** で自分のリポジトリを作成してからクローンしてください。
 
 ```bash
 git clone <作成したリポジトリのURL>
