@@ -104,3 +104,4 @@ docker compose down -v
 - Docker Desktop が必要です（Mac / Windows 対応）
 - エディタは **VSCode を前提**としています。他のエディタでは IntelliSense が動作しない場合があります。
 - **このテンプレートは開発環境専用です。本番環境へのデプロイ設定（セキュリティ・インフラ構成など）は各自でカスタマイズしてください。**
+- **Dependabot はデフォルトで無効**（`open-pull-requests-limit: 0`）にしています。有効にする場合は `.github/dependabot.yml` の各 `open-pull-requests-limit` を `0` 以外の値に変更してください。
